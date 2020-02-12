@@ -1,0 +1,38 @@
+
+.main 
+  .header
+    %ul.header__list
+      %li.header__list__name test
+      %li.header__list__member Member:masa
+    .header__edit
+      Edit
+  .list
+    .list__box
+      .list__box__upper
+        .list__box__upper__name
+          masa
+        .list__box__upper__time
+          2019/11/20(Wed)/17:20:00
+      .list__box__message
+        おはよう
+    .list__box
+      .list__box__upper
+        .list__box__upper__name
+          tata
+        .list__box__upper__time
+          2019/11/20(Wed)/20:50:00
+      .list__box__message
+        やあ
+
+
+  .form
+    .form__message
+      .form__message__box
+        .form__message__box__text
+          type a message
+        %label.form__message__box__icon
+          = icon('far','image')
+          %input{type: "file"}
+    .form__btn
+      %label.form__btn
+        %input{:type => "submit", :value => "Send"}/
