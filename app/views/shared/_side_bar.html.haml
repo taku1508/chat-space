@@ -1,17 +1,20 @@
 .side
   .side__header
+
     .side__header__user-box
       .side__header__user-box__name 
-        masa
+        = current_user.name
       .side__header__user-box__icon
-        =link_to "#",class:"side__header__user-box__icon" do
+        =link_to new_group_path,class:"side__header__user-box__icon" do
           = icon('far','keyboard')
         =link_to "#",class:"side__header__user-box__icon" do
-          = icon('fas','cog')
+          = icon('fas','cog',class: 'icon')
   .side__list
-    .side__list__group-block
-      .side__list__group-block__name
-        techcamp
-      .side__list__group-block__message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side__list__group-block
+        = link_to '#' do
+          .side__list__group-block__name
+            = group.name
+          .side__list__group-block__message
+            まだメッセージがありません
 
