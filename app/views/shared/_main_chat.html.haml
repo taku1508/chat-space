@@ -1,11 +1,15 @@
-
 .main 
   .header
     %ul.header__list
-      %li.header__list__name test
-      %li.header__list__member Member:masa
+      %li.header__list__name 
+        = @group.name
+      %li.header__list__member
+        - @group.users.each do |content|
+          = content.name
     .header__edit
-      Edit
+      .header__edit__box
+        = link_to edit_group_path(@group),class:"header__edit__box" do
+          Edit
   .list
     .list__box
       .list__box__upper
@@ -20,19 +24,18 @@
         .list__box__upper__name
           tata
         .list__box__upper__time
-          2019/11/20(Wed)/20:50:00
+          2019/11/20(Wed)/20:50:00  
       .list__box__message
         やあ
 
+  .messages
+  = render @messages
 
   .form
-    .form__message
-      .form__message__box
-        .form__message__box__text
-          type a message
-        %label.form__message__box__icon
+    = form_for [@group,@message] do |f|
+      .div
+        = f.text_field :content, class: 'message', placeholder: 'type a message'
+        = f.label :image, class: 'img-icon' do
           = icon('far','image')
-          %input{type: "file"}
-    .form__btn
-      %label.form__btn
-        %input{:type => "submit", :value => "Send"}/
+          = f.file_field :image
+      = f.submit 'Send', class: 'send-btn'
