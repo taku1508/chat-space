@@ -86,9 +86,11 @@
       height: 40px;
       line-height: 40px;
       padding: 0 20px;
-    } 
-  }  
-
+      &__box{
+      // 何も入れてない
+      } 
+    }  
+  }
   .list{
     height: calc(100vh - 100px - 90px);
     width: calc(100vw - 300px);
@@ -122,57 +124,48 @@
 
   .form{
     height: 90px;
-    width: calc(100vw - 180px);
     background-color: #d2d2d2;
     display: flex;
-    padding: 20px 50px 20px 40px;
-    &__message{
-      align-items: center;
-      display: flex;
-      border: none;
+    align-items: center;
+    .new_message{
       height: 50px;
-      width: calc(100% - 220px);
-      box-sizing: border-box;
-      float:left;
-      padding: 0 10px;
-      background-color: white;
-      position: relative;
-      &__box{
-        display: flex;
-        justify-content: space-between;
-        
-        &__text{
-          color:#999999;
-          display: flex;
-          justify-content:center;
-          position: relative;
-        }  
-        &__icon{
-          display: block;
-          margin-right:auto;
-          position:absolute;
-          right: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .div{
+        position: relative;
+        margin-left: 50px;
+        width:100%;
+        .message{
+          border-style: none;
+          padding: 0 40px 0 10px;
+          height: 100%;
+          width: 100%;
+        }
+        .img-icon{
+          position: absolute;
+          right: 20px;
+          line-height: 50px;
+          bottom: 2px;
           font-size: 25px;
+          cursor: pointer;
           input{
             display: none;
           }
         }
       }
-    }
-    &__btn{
-      input{
-      // padding: 20px 50px;
-      background-color: #38AEF0;
-      border: none;
-      color:white;
-      font-size: 20px;
-      float: right;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-      line-height: 50px;
-      display: block;
+      .send-btn{
+        margin: 0 40px 0 15px;
+        padding: 0 20px;
+        color: #ffffff;
+        background-color: #38aef0;
+        text-decoration: none;
+        line-height: 50px;
+        font-size: 20px;
       }
     }
   } 
+}
+.field_with_errors {
+  display: contents;
 }
