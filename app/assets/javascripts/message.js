@@ -56,7 +56,7 @@ $('#new_message').on('submit', function(e){
       $('.list').append(html);
       $('.list').animate({ scrollTop: $('.list')[0].scrollHeight});
       $('form')[0].reset();
-      autoScroll();
+      // autoScroll();
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
