@@ -96,6 +96,7 @@
     width: calc(100vw - 300px);
     background-color: #ffffff;
     list-style: none;
+    overflow: scroll;
     &__box{
       margin-left: 40px;
       &__upper{

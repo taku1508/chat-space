@@ -11,25 +11,26 @@
         = link_to edit_group_path(@group),class:"header__edit__box" do
           Edit
   .list
-    .list__box
-      .list__box__upper
-        .list__box__upper__name
-          masa
-        .list__box__upper__time
-          2019/11/20(Wed)/17:20:00
-      .list__box__message
-        おはよう
-    .list__box
-      .list__box__upper
-        .list__box__upper__name
-          tata
-        .list__box__upper__time
-          2019/11/20(Wed)/20:50:00  
-      .list__box__message
-        やあ
+    = render @messages
+    -# .list__box
+    -#   .list__box__upper
+    -#     .list__box__upper__name
+    -#       masa
+    -#     .list__box__upper__time
+    -#       2019/11/20(Wed)/17:20:00
+    -#   .list__box__message
+    -#     おはよう
+    -# .list__box
+    -#   .list__box__upper
+    -#     .list__box__upper__name
+    -#       tata
+    -#     .list__box__upper__time
+    -#       2019/11/20(Wed)/20:50:00  
+    -#   .list__box__message
+    -#     やあ
 
-  .messages
-  = render @messages
+  -# .messages
+    
 
   .form
     = form_for [@group,@message] do |f|
@@ -38,4 +39,4 @@
         = f.label :image, class: 'img-icon' do
           = icon('far','image')
           = f.file_field :image
-      = f.submit 'Send', class: 'send-btn'
+      = f.submit 'Send', "data-disable-with": "送信中...", id: 'send-btn',class: 'send-btn'
