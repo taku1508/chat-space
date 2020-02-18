@@ -78,6 +78,7 @@ $(function(){
         $('.messages').append(insertHTML);
         $('.messages').animate({ scrollTop: $('.message')[0].scrollHeight});
       }
+
     })
     .fail(function() {
       console.log('error');
