@@ -6,7 +6,7 @@
       .side__header__user-box__icon
         =link_to new_group_path,class:"side__header__user-box__icon" do
           = icon('far','keyboard')
-        =link_to "#",class:"side__header__user-box__icon" do
+        =link_to edit_user_path(current_user),class:"side__header__user-box__icon" do
           = icon('fas','cog',class: 'icon')
   .side__list
     - current_user.groups.each do |group|
