@@ -1,6 +1,4 @@
 $(function(){
-  // last_message_id = $('.message:last').data("message-id");
-  // console.log(last_message_id);
   function buildHTML(message){
     if ( message.image ) {
       var html =
@@ -37,13 +35,11 @@ $(function(){
       return html;
     };
   }
-
-
   $('#new_message').on('submit', function(e){
-      e.preventDefault()
-      var formData = new FormData(this);
-      var url = $(this).attr("action");
-      $('#send-btn').removeAttr('data-disable-with');
+    e.preventDefault()
+    var formData = new FormData(this);
+    var url = $(this).attr("action");
+    $('#send-btn').removeAttr('data-disable-with');
 
       $.ajax({
         url: url,
@@ -61,7 +57,7 @@ $(function(){
         autoScroll();
       })
       .fail(function() {
-        alert("メッセージ送信に失敗しました");
+      alert("メッセージ送信に失敗しました");
       });
   });
 
