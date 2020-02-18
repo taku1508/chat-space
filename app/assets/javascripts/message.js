@@ -57,7 +57,7 @@ $(function(){
         autoScroll();
       })
       .fail(function() {
-      alert("メッセージ送信に失敗しました");
+        alert("メッセージ送信に失敗しました");
       });
   });
 
@@ -81,7 +81,7 @@ $(function(){
 
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
