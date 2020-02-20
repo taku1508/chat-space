@@ -21,7 +21,6 @@
       background-color:#253141;
       display: flex;
       justify-content:space-between;
-      
       &__name{
         color:#ffffff;
         font-size: 16px;
@@ -41,6 +40,7 @@
     width: 300px;
     background-color:#2f3e51;
     &__group-block{
+      text-decoration: none;
       &__name{
         font-size: 15px;
         color:#ffffff;
@@ -87,7 +87,7 @@
       line-height: 40px;
       padding: 0 20px;
       &__box{
-        //何も入れていない
+        text-decoration: none;
       } 
     }  
   }
