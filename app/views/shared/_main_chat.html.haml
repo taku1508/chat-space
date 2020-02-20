@@ -4,8 +4,8 @@
       %li.header__list__name 
         = @group.name
       %li.header__list__member
-        - @group.users.each do |content|
-          = content.name
+        - @group.users.each do |group_user|
+          = group_user.name
     .header__edit
       .header__edit__box
         = link_to edit_group_path(@group),class:"header__edit__box" do
