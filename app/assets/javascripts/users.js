@@ -44,7 +44,6 @@ $(function() {
       })
         .done(function(users) {
         $("#user-search-result").empty();
-          console.log(users)
         if (users.length !== 0){
           users.forEach(function(user){
             addUser(user);
@@ -68,7 +67,7 @@ $(function() {
       .parent()
       .remove();
     addDeleteUser(userName, userId);
-    addMemder(userId);
+    addMember(userId);
   });
 
   $(document).on("click", ".chat-group-user__btn--remove",function(){
